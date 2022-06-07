@@ -1,5 +1,5 @@
 require 'active_record'
-require 'rescue_unique_constraint'
+require 'rescue_unique_constraint-p'
 
 describe RescueUniqueConstraint do
   before :all do

@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rescue_unique_constraint/version'
+require 'rescue_unique_constraint-p/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "rescue_unique_constraint"
+  spec.name          = "rescue_unique_constraint-p"
   spec.version       = RescueUniqueConstraint::VERSION
   spec.authors       = ["Tam Dang", "Yan Pritzker"]
   spec.email         = ["tam.dang@reverb.com","yan@reverb.com"]

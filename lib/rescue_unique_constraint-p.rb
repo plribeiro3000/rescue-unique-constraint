@@ -1,9 +1,9 @@
-require 'rescue_unique_constraint/version'
-require 'rescue_unique_constraint/index'
-require 'rescue_unique_constraint/rescue_handler'
-require 'rescue_unique_constraint/adapter/mysql_adapter'
-require 'rescue_unique_constraint/adapter/postgresql_adapter'
-require 'rescue_unique_constraint/adapter/sqlite_adapter'
+require 'rescue_unique_constraint-p/version'
+require 'rescue_unique_constraint-p/index'
+require 'rescue_unique_constraint-p/rescue_handler'
+require 'rescue_unique_constraint-p/adapter/mysql_adapter'
+require 'rescue_unique_constraint-p/adapter/postgresql_adapter'
+require 'rescue_unique_constraint-p/adapter/sqlite_adapter'
 require 'active_record'
 
 # Module which will rescue ActiveRecord::RecordNotUnique exceptions
