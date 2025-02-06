@@ -16,7 +16,7 @@ See Usage for more info.
 
 Add this line to your application's Gemfile:
 
-    gem 'rescue_unique_constraint'
+    gem 'rescue_unique_constraint-p'
 
 And then execute:
 
@@ -24,7 +24,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rescue_unique_constraint
+    $ gem install rescue_unique_constraint-p
 
 ## Usage
 

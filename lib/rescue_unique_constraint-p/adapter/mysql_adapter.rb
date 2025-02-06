@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module RescueUniqueConstraint
   module Adapter
-    class PostgresqlAdapter
+    class MysqlAdapter
       def index_error?(index, error_message)
         error_message[/#{index.name}/]
       end

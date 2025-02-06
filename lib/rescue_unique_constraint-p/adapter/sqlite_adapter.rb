@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RescueUniqueConstraint
   module Adapter
     class SqliteAdapter
@@ -11,7 +13,7 @@ module RescueUniqueConstraint
       # Step1: extract column names from above message on which unique constraint failed.
       # Step2: Check if this index's field is among those columns.
       def index_error?(index, error_message)
-        column_names = error_message.scan(%r{(?<=#{@table_name}\.)\w+})
+        column_names = error_message.scan(/(?<=#{@table_name}\.)\w+/)
         column_names.include?(index.field)
       end
     end

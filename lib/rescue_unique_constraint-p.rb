@@ -1,9 +1,11 @@
-require 'rescue_unique_constraint/version'
-require 'rescue_unique_constraint/index'
-require 'rescue_unique_constraint/rescue_handler'
-require 'rescue_unique_constraint/adapter/mysql_adapter'
-require 'rescue_unique_constraint/adapter/postgresql_adapter'
-require 'rescue_unique_constraint/adapter/sqlite_adapter'
+# frozen_string_literal: true
+
+require 'rescue_unique_constraint-p/version'
+require 'rescue_unique_constraint-p/index'
+require 'rescue_unique_constraint-p/rescue_handler'
+require 'rescue_unique_constraint-p/adapter/mysql_adapter'
+require 'rescue_unique_constraint-p/adapter/postgresql_adapter'
+require 'rescue_unique_constraint-p/adapter/sqlite_adapter'
 require 'active_record'
 
 # Module which will rescue ActiveRecord::RecordNotUnique exceptions
@@ -17,7 +19,7 @@ module RescueUniqueConstraint
   # methods mixed into ActiveRecord class
   module ClassMethods
     def index_rescue_handler
-      @_index_rescue_handler ||= RescueUniqueConstraint::RescueHandler.new(self)
+      @index_rescue_handler ||= RescueUniqueConstraint::RescueHandler.new(self)
     end
 
     def rescue_unique_constraint(index:, field:)

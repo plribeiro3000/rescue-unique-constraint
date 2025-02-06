@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RescueUniqueConstraint
   # Handles storing and matching [index, field] pairs to exceptions
   class RescueHandler
@@ -14,7 +16,9 @@ module RescueUniqueConstraint
       indexes = indexes_to_rescue_on.select do |index|
         database_adapter.index_error?(index, e.message)
       end
+
       raise e unless indexes.any?
+
       indexes
     end
 
@@ -23,7 +27,7 @@ module RescueUniqueConstraint
     attr_reader :indexes_to_rescue_on, :model
 
     def database_adapter
-      @_database_adapter ||= (
+      @database_adapter ||=
         case database_name
         when :mysql2
           Adapter::MysqlAdapter.new
@@ -34,7 +38,6 @@ module RescueUniqueConstraint
         else
           raise "Database (#{database_name}) not supported"
         end
-      )
     end
 
     def database_name
